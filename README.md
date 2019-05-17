@@ -1,5 +1,5 @@
 # Bamazon
-
+dsgisdjgjs;dklj 
 ## Instructions
 
 ### Challenge #1: Customer View (Minimum Requirement)
@@ -16,7 +16,7 @@
 
    * department_name
 
-   * price (cost to customer)
+   * price (cost to customer)d
 
    * stock_quantity (how much of the product is available in stores)
 
