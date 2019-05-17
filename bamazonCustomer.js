@@ -20,7 +20,7 @@ connection.connect(function(err) {
   console.log("connected as id " + connection.threadId);
   afterConnection();
   // idSearch();
-  buy ();
+  // buy ();
 });
 
 function afterConnection() {
@@ -80,6 +80,9 @@ function buy() {
         }
       ])
       .then(function(answer) {
+
+
+        
         // get the information of the chosen item
         var chosenItem;
         for (var i = 0; i < results.length; i++) {
