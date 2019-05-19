@@ -21,6 +21,6 @@ INSERT INTO products VALUES
 (7, 'Espresso Machine', 'Kitchen Appliances', 240, 49),
 (8, 'Protein Powder', 'Workout Supplements', 29.99, 563),
 (9, 'Bamazon Balexa', 'Electronics', 30, 10000),
-(10, 'Wireless Keyboard', 'Electronics', 57, 4354)
+(10, 'Wireless Keyboard', 'Electronics', 57, 4354);
 
 SELECT * FROM products;
