@@ -55,22 +55,12 @@ function afterConnection() {
 
 
 function buy() {
-  // query the database for all items being auctioned
-  connection.query("SELECT * FROM products", function(err, results) {
-    if (err) throw err;
-    // once you have the items, prompt the user for which they'd like to bid on
+
     inquirer
       .prompt([
         {
           name: "id",
           type: "input",
-          // choices: function() {
-          //   var choiceArray = [];
-          //   for (var i = 0; i < results.length; i++) {
-          //     choiceArray.push(results[i].product_id);
-          //   }
-          //   return choiceArray;
-          // },
           message: "What is the ID of the product you would like to purchase?"
         },
         {
@@ -80,41 +70,28 @@ function buy() {
         }
       ])
       .then(function(answer) {
-
-
+        connection.query("SELECT * FROM products WHERE item_id=? answer.id ", function(err, results) {
+          if (err) throw err;
         
         // get the information of the chosen item
-        var chosenItem;
+      
         for (var i = 0; i < results.length; i++) {
-          if (results[i].product_name === answer.choice) {
-            chosenItem = results[i];
-          }
+          if (answer.quantity > results[i].stock_quantity){
+            console.log ("Insufficient Quanitity!!");
+            afterConnection();
+          } else {
+            console.log("Your order was placed successfully!");
+            console.log ("You ordered: "); 
+            console.log ("Item: " + results[i].product_name);
+            console.log ("Department: " + results[i].department_name);
+            console.log ("Price: " + results[i].price);
+            console.log ("Quantity: " + results[i].answer.quantity);
+            console.log ("Total: " + results[i].price * answer.quantity);
+          };
         }
 
-        // determine if quantity was high enough
-        if (chosenItem.stock_quantity < parseInt(answer.quantity)) {
-
-          connection.query(
-            "UPDATE products SET ? WHERE ?",
-            [
-              {
-                stock_quantity: answer.quantity
-              },
-              {
-                id: chosenItem.id
-              }
-            ],
-            function(error) {
-              if (error) throw err;
-              console.log("Your order was placed successfully!");
-              afterConnection();
-            }
-          );
-        }
-        else {
-          console.log("Insufficient quantity!");
-          afterConnection();
-        }
+   
+        
       });
   });
 }
