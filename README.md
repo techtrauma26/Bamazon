@@ -2,7 +2,7 @@
 
 ![Build Status](https://img.shields.io/badge/LIRI-node-ff69b4.svg?style=for-the-badge&logo=npm)
 
-![bamazon](img/logon.jpg)
+![bamazon](images/logon.jpg)
 >Liri is a Language Interpretation and Recognition Interface that searches for songs, concerts, movies or random action on a random file.
 
 ## Table of contents
