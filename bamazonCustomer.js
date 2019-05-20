@@ -19,8 +19,7 @@ connection.connect(function (err) {
   if (err) throw err;
   console.log("connected as id " + connection.threadId);
   afterConnection();
-  // idSearch();
-  // buy ();
+
 });
 
 function afterConnection() {
@@ -30,28 +29,12 @@ function afterConnection() {
       console.log(res[i].item_id + " | " + res[i].product_name + " | " + res[i].price);
     }
     console.log("-----------------------------------");
-    // connection.end();
+   
     buy();
   });
 }
 
-// function idSearch() {
-//   inquirer
-//     .prompt({
-//       name: "product_id",
-//       type: "input",
-//       message: "What is the ID of the product you would like to purchase?"
-//     })
-//     .then(function(answer) {
-//       var query = "SELECT prodocut_id FROM products WHERE ?";
-//       connection.query(query, { product_id: answer.product_id }, function(err, res) {
-//         for (var i = 0; i < res.length; i++) { 
-//           console.log("ID: " + res[i].product_id);
-//         }
-//        afterConnection();
-//       });
-//     });
-// }
+
 
 // PURCHASE PRODUCT  // 
 function buy() {
