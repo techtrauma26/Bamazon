@@ -2,7 +2,7 @@
 
 ![Build Status](https://img.shields.io/badge/LIRI-node-ff69b4.svg?style=for-the-badge&logo=npm)
 
-![bamazon](Images\logon.jpg)
+![bamazon](Images/logon.jpg)
 >
 
 ## Table of contents

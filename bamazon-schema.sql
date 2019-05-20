@@ -12,7 +12,7 @@ CREATE TABLE products (
 );
 
 INSERT INTO products VALUES
-(1, 'Brother Laser Printer', 'Electronics', 119, 2023),
+(1, 'Bamazon Balexa', 'Electronics', 30, 10000),
 (2, 'Yoga Mat', 'Health & Fitness', 25, 435),
 (3, 'Iphone X Case', 'Cellphone Accessories', 21, 650),
 (4, 'Celing Fan', 'Home & Kitchen', 140, 200),
@@ -20,7 +20,7 @@ INSERT INTO products VALUES
 (6, 'LED Light Blubs', 'Home Improvement', 12, 7920),
 (7, 'Espresso Machine', 'Kitchen Appliances', 240, 49),
 (8, 'Protein Powder', 'Workout Supplements', 29.99, 563),
-(9, 'Bamazon Balexa', 'Electronics', 30, 10000),
+(9, 'Brother Laser Printer', 'Electronics', 119, 2023),
 (10, 'Wireless Keyboard', 'Electronics', 57, 4354);
 
 SELECT * FROM products;
