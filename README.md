@@ -4,9 +4,6 @@
 
 <<<<<<< HEAD
 ![bamazon](Images/logon.jpg)
-=======
-![bamazon](/Images/logon.jpg)
->>>>>>> 1e1138ca9806044901427f0a468ef1a81e0d6703
 >
 
 ## Table of contents
@@ -43,9 +40,6 @@ $ node bamazonCustomer.js
 * [Node.js](https://nodejs.org/)- evented I/O for the backend
 * [JavaScript](https://www.javascript.com/)
 * [NPM](https://www.npmjs.com/) - Package manager
-* [Spotify-API](https://developer.spotify.com/documentation/web-api/) - API library for Spotify
-* [BandsinTown-API](http://www.artists.bandsintown.com/bandsintown-api) - API library for Bands/Artists
-* [OMDB-API](https://www.omdbapi.com/) - API library for movies
 
 
 
