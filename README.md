@@ -33,11 +33,11 @@ $ node bamazonCustomer.js
 
 ## Examples
 
-Prodcuts avaiable on Bamazon:
+Products avaiable on Bamazon:
 
 ![Example screenshot](Images/products.gif)
 
-Making a purchase on BamazonL
+Making a purchase on Bamazon:
 
 ![Example screenshot](Images/purchase.gif)
 
@@ -46,4 +46,4 @@ Making a purchase on BamazonL
 * [Node.js](https://nodejs.org/)- evented I/O for the backend
 * [JavaScript](https://www.javascript.com/)
 * [NPM](https://www.npmjs.com/) - Package manager
-* [MySQL](https://www.mysql.com/) 
+* [MySQL](https://www.mysql.com/)
