@@ -32,9 +32,8 @@ $ node bamazonCustomer.js
 ## Examples
 
 ![Example screenshot](Images/products.gif)
+
 ![Example screenshot](Images/purchase.gif)
-
-
 
 ## Technologies
 
