@@ -31,8 +31,8 @@ $ node bamazonCustomer.js
 
 ## Examples
 
-![Example screenshot](images/products.gif)
-![Example screenshot](images/purchase.gif)
+![Example screenshot](Images/products.gif)
+![Example screenshot](Images/purchase.gif)
 
 
 
