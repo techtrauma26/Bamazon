@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
   user: "root",
 
   // Your password
-  password: "",
+  password: "1vaijayanthi",
   database: "bamazonDB"
 });
 
@@ -25,10 +25,19 @@ connection.connect(function (err) {
 function afterConnection() {
   connection.query("SELECT * FROM products", function (err, res) {
     if (err) throw err;
+    console.log ("**************************************************");
+
+    console.log ("\n    WELCOME TO BAMAZON!!!\n");
+      console.log ("**************************************************\n");
+    console.log ("Id |   Bamazaon Product   | Price ");
+    console.log ("_________________________________");
+              
     for (var i = 0; i < res.length; i++) {
-      console.log(res[i].item_id + " | " + res[i].product_name + " | " + res[i].price);
+      
+      console.log(res[i].item_id + " | " + res[i].product_name + " | $" + res[i].price);
     }
-    console.log("-----------------------------------");
+    console.log ("_________________________________");
+
    
     buy();
   });
@@ -57,16 +66,16 @@ function buy() {
         if (err) throw err;
         for (var i = 0; i < results.length; i++) {
           if (answer.quantity > results[i].stock_quantity) {
-            console.log("Insufficient Quanitity!!");
+            console.log("Sorry insufficient quanitity!!");
             afterConnection();
           } else {
             console.log("Your order was placed successfully!");
-            console.log("You ordered: ");
+            console.log("\nYou ordered: \n");
             console.log("Item: " + results[i].product_name);
             console.log("Department: " + results[i].department_name);
-            console.log("Price: " + results[i].price);
+            console.log("Price: $" + results[i].price);
             console.log("Quantity: " + answer.quantity);
-            console.log("Total: " + results[i].price * answer.quantity);
+            console.log("Total: $" + results[i].price * answer.quantity);
 
             connection.query("UPDATE products SET ? WHERE ?", [{
               stock_quantity: results[i].stock_quantity - answer.quantity
@@ -75,7 +84,9 @@ function buy() {
           }],
                     );
                     const updatedQuantity = (results[i].stock_quantity - answer.quantity);
-                    console.log (updatedQuantity);
+                    console.log ("_________________________________\n\n\n\n\n");
+
+                    console.log ("Units remaining: " + updatedQuantity);
           };
         };
      
