@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
   user: "root",
 
   // Your password
-  password: "",
+  password: "1vaijayanthi",
   database: "bamazonDB"
 });
 
@@ -29,15 +29,15 @@ function afterConnection() {
 
     console.log ("\n    WELCOME TO BAMAZON!!!\n");
       console.log ("**************************************************\n");
-    console.log ("Id |   Bamazaon Product   | Price ");
-    console.log ("_________________________________");
+    // console.log ("Id |   Bamazaon Product   | Price ");
+    // console.log ("_________________________________");
               
-    for (var i = 0; i < res.length; i++) {
+    // for (var i = 0; i < res.length; i++) {
       
-      console.log(res[i].item_id + " | " + res[i].product_name + " | $" + res[i].price);
-    }
-    console.log ("_________________________________");
-
+    //   console.log(res[i].item_id + " | " + res[i].product_name + " | $" + res[i].price);
+    // }
+    // console.log ("_________________________________");
+    console.table (res);
    
     buy();
   });
